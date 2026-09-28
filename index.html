@@ -1,0 +1,383 @@
+<!DOCTYPE html>  
+<html lang="id">  
+<head>  
+  <meta charset="UTF-8" />  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+  
+  <title>JULPA LATIFAH KURNIA</title>  
+  
+  <!-- FONT -->  
+  <link rel="preconnect" href="https://fonts.googleapis.com">  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
+  
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">  
+  
+  <style>  
+    /* ==============================  
+       RESET  
+    ============================== */  
+  
+    *, *::before, *::after {  
+      box-sizing: border-box;  
+      margin: 0;  
+      padding: 0;  
+    }  
+  
+    /* ==============================  
+       BODY  
+    ============================== */  
+  
+    body {  
+      font-family: 'Poppins', sans-serif;  
+      font-size: 13px;  
+      color: #3f3540;  
+      background: #fff8fb;  
+      padding: 50px 70px;  
+      max-width: 860px;  
+      margin: 0 auto;  
+      line-height: 1.6;  
+    }  
+  
+    /* ==============================  
+       JUDUL  
+    ============================== */  
+  
+    .cv-title {  
+      text-align: center;  
+      margin-bottom: 20px;  
+    }  
+  
+    .cv-title h1 {  
+      font-family: 'DM Serif Display', serif;  
+      font-size: 30px;  
+      font-weight: normal;  
+      letter-spacing: 3px;  
+      text-transform: uppercase;  
+      color: #9b6076;  
+      border-bottom: 2px solid #d9a7b8;  
+      display: inline-block;  
+      padding: 0 15px 7px;  
+    }  
+  
+    /* ==============================  
+       FOTO  
+    ============================== */  
+  
+    .cv-photo {  
+      text-align: center;  
+      margin-bottom: 30px;  
+    }  
+  
+    .cv-photo img {  
+      width: 110px;  
+      height: 140px;  
+      object-fit: cover;  
+      object-position: top;  
+      border: 3px solid #f0d5df;  
+      border-radius: 8px;  
+      padding: 3px;  
+      background: white;  
+      display: inline-block;  
+      box-shadow: 0 5px 15px rgba(155, 96, 118, 0.15);  
+    }  
+  
+    /* ==============================  
+       SECTION  
+    ============================== */  
+  
+    .section {  
+      margin-bottom: 26px;  
+      background: #ffffff;  
+      padding: 18px 20px;  
+      border-radius: 10px;  
+      border: 1px solid #f0dce4;  
+      box-shadow: 0 3px 12px rgba(155, 96, 118, 0.06);  
+      transition: all 0.3s ease;  
+    }  
+  
+    .section:hover {  
+      transform: translateY(-2px);  
+      box-shadow: 0 5px 18px rgba(155, 96, 118, 0.10);  
+    }  
+  
+    /* ==============================  
+       JUDUL SECTION  
+    ============================== */  
+  
+    .section h2 {  
+      font-family: 'Poppins', sans-serif;  
+      font-size: 14px;  
+      font-weight: 700;  
+      text-transform: uppercase;  
+      letter-spacing: 1.5px;  
+      color: #9b6076;  
+      border-bottom: 2px solid #efd4df;  
+      padding-bottom: 7px;  
+      margin-bottom: 12px;  
+    }  
+  
+    /* ==============================  
+       DATA PRIBADI  
+    ============================== */  
+  
+    .data-table {  
+      width: 100%;  
+      border-collapse: collapse;  
+    }  
+  
+    .data-table td {  
+      padding: 4px 0;  
+      vertical-align: top;  
+      font-size: 13px;  
+      line-height: 1.7;  
+    }  
+  
+    .data-table td:nth-child(1) {  
+      width: 170px;  
+      font-weight: 600;  
+      color: #72515f;  
+    }  
+  
+    .data-table td:nth-child(2) {  
+      width: 14px;  
+      text-align: center;  
+      color: #c28a9e;  
+      font-weight: bold;  
+    }  
+  
+    .data-table td:nth-child(3) {  
+      color: #4b4147;  
+    }  
+
+    .data-table td:nth-child(3) a {
+      color: #9b6076;
+      text-decoration: none;
+    }
+
+    .data-table td:nth-child(3) a:hover {
+      text-decoration: underline;
+    }
+  
+    /* ==============================  
+       RIWAYAT PENDIDIKAN  
+    ============================== */  
+  
+    .edu-table {  
+      width: 100%;  
+      border-collapse: collapse;  
+    }  
+  
+    .edu-table tr {  
+      border-bottom: 1px solid #f3e5ea;  
+    }  
+  
+    .edu-table tr:last-child {  
+      border-bottom: none;  
+    }  
+  
+    .edu-table td {  
+      padding: 7px 0;  
+      font-size: 13px;  
+      line-height: 1.6;  
+      vertical-align: middle;  
+    }  
+  
+    .edu-table td:first-child {  
+      width: 55%;  
+      font-weight: 500;  
+      color: #4b4147;  
+    }  
+  
+    .edu-table td:last-child {  
+      color: #a57989;  
+      font-style: italic;  
+      text-align: right;  
+    }  
+  
+    /* ==============================  
+       KEMAMPUAN  
+    ============================== */  
+  
+    .skill-list {  
+      list-style: none;  
+      padding: 0;  
+    }  
+  
+    .skill-list li {  
+      font-size: 13px;  
+      padding: 7px 0 7px 22px;  
+      position: relative;  
+      border-bottom: 1px solid #f5e9ed;  
+      line-height: 1.6;  
+      color: #4b4147;  
+    }  
+  
+    .skill-list li:last-child {  
+      border-bottom: none;  
+    }  
+  
+    .skill-list li::before {  
+      content: '✦';  
+      position: absolute;  
+      left: 0;  
+      color: #c58ca1;  
+      font-size: 11px;  
+      top: 8px;  
+    }  
+  
+    /* ==============================  
+       TANDA TANGAN  
+    ============================== */  
+  
+    .signature {  
+      margin-top: 40px;  
+      text-align: right;  
+      font-size: 12px;  
+      color: #665861;  
+      line-height: 2;  
+    }  
+  
+    .signature__name {  
+      margin-top: 48px;  
+      border-top: 1px solid #a77b8b;  
+      display: inline-block;  
+      min-width: 180px;  
+      text-align: center;  
+      padding-top: 4px;  
+      font-size: 12px;  
+      font-weight: 600;  
+      color: #59424c;  
+    }  
+  
+    /* ==============================  
+       RESPONSIVE  
+    ============================== */  
+  
+    @media (max-width: 600px) {  
+      body { padding: 30px 20px; }  
+      .cv-title h1 { font-size: 24px; letter-spacing: 2px; }  
+      .section { padding: 15px; }  
+      .data-table td:nth-child(1) { width: 130px; }  
+      .data-table td { font-size: 12px; }  
+      .edu-table td { font-size: 12px; }  
+      .skill-list li { font-size: 12px; }  
+    }  
+  
+    /* ==============================  
+       PRINT  
+    ============================== */  
+  
+    @media print {  
+      body { background: white; padding: 40px 50px; }  
+      .section { box-shadow: none; background: white; }  
+      .section:hover { transform: none; }  
+    }  
+  
+  </style>  
+</head>  
+  
+<body>  
+  
+  <!-- JUDUL -->  
+  <div class="cv-title">  
+    <h1>Riwayat Hidup</h1>  
+  </div>  
+  
+  <!-- FOTO -->  
+  <div class="cv-photo">  
+    <img src="julpa.jpg" alt="Foto Julpa Latifah Kurnia">  
+  </div>  
+  
+  <!-- DATA PRIBADI -->  
+  <section class="section">  
+    <h2>Data Pribadi</h2>  
+    <table class="data-table">  
+      <tr>  
+        <td>Nama</td>  
+        <td>:</td>  
+        <td>Julpa Latifah Kurnia</td>  
+      </tr>  
+      <tr>  
+        <td>Tempat, Tanggal Lahir</td>  
+        <td>:</td>  
+        <td>Garut, 07 Juli 2007</td>  
+      </tr>  
+      <tr>  
+        <td>Jenis Kelamin</td>  
+        <td>:</td>  
+        <td>Perempuan</td>  
+      </tr>  
+      <tr>  
+        <td>Agama</td>  
+        <td>:</td>  
+        <td>Islam</td>  
+      </tr>  
+      <tr>  
+        <td>Alamat</td>  
+        <td>:</td>  
+        <td>Garut, Jawa Barat, Indonesia</td>  
+      </tr>  
+      <tr>  
+        <td>Nomor Telepon</td>  
+        <td>:</td>  
+        <td>085624715227</td>  
+      </tr>
+      <tr>
+        <td>Email</td>
+        <td>:</td>
+        <td><a href="mailto:julpalatipahkurnia@gmail.com">julpalatipahkurnia@gmail.com</a></td>
+      </tr>
+    </table>  
+  </section>  
+  
+  <!-- RIWAYAT PENDIDIKAN -->  
+  <section class="section">  
+    <h2>Riwayat Pendidikan</h2>  
+    <table class="edu-table">  
+      <tr>  
+        <td>SDN Banjarwangi 1</td>  
+        <td>2011 – 2017</td>  
+      </tr>  
+      <tr>  
+        <td>SMP Al-Halim Garut</td>  
+        <td>2017 – 2020</td>  
+      </tr>  
+      <tr>  
+        <td>SMA Manahijul Huda</td>  
+        <td>2020 – 2023</td>  
+      </tr>  
+      <tr>  
+        <td>Politeknik Manahijul Huda</td>  
+        <td>2023 – Sekarang</td>  
+      </tr>  
+    </table>  
+  </section>  
+  
+  <!-- KEMAMPUAN -->  
+  <section class="section">  
+    <h2>Kemampuan</h2>  
+    <ul class="skill-list">  
+      <li>Web Development: HTML, CSS, JavaScript, dan PHP dasar</li>  
+      <li>Database Management: MySQL &amp; phpMyAdmin</li>  
+      <li>Software Development: Flowchart, pseudocode, dan dasar SDLC</li>  
+    </ul>  
+  </section>  
+  
+  <!-- TANDA TANGAN -->  
+  <div class="signature">  
+    <p>Tasikmalaya, <span id="tgl"></span></p>  
+    <p>Yang membuat pernyataan,</p>  
+    <p><span class="signature__name">Julpa Latifah Kurnia</span></p>  
+  </div>  
+  
+  <!-- JAVASCRIPT TANGGAL -->  
+  <script>  
+    const bulan = ['Januari','Februari','Maret','April','Mei','Juni',
+                   'Juli','Agustus','September','Oktober','November','Desember'];  
+    const d = new Date();  
+    document.getElementById('tgl').textContent =
+      d.getDate() + ' ' + bulan[d.getMonth()] + ' ' + d.getFullYear();  
+  </script>  
+  
+</body>  
+</html>
